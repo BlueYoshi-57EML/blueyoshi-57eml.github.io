@@ -486,6 +486,7 @@ Upgrades
 		desc:A custom-built Kiesel DC guitar!<//><b>Effect:</b><.>Neo Bodur is 2x more efficient
 		cost:2 neobodur
 		passive:multiply bucket yield of neobodur by 2
+		passive:multiply cd yield of neobodur by 2
 		req:(neobodur>=1)
 		icon:icons[7,2]
 	*iem
@@ -493,6 +494,7 @@ Upgrades
 		desc:You can now hear the unheard. TESTING... WATERMELONS CABBAGES!!<//><b>Effect:</b><.>Neo Bodur is 2x more efficient.
 		cost:10 neobodur
 		passive:multiply bucket yield of neobodur by 2
+		passive:multiply cd yield of neobodur by 2
 		req:(neobodur>=5)
 		icon:icons[7,3]
 	*3d
@@ -500,6 +502,7 @@ Upgrades
 		desc:Start your V-Tubing career!<//><b>Effect:</b><.>Neo Bodur is 2x more efficient.
 		cost:25 neobodur
 		passive:multiply bucket yield of neobodur by 2
+		passive:multiply cd yield of neobodur by 2
 		req:(neobodur>=10)
 		icon:icons[7,4]
 	*line6
@@ -507,6 +510,7 @@ Upgrades
 		desc:Tried using my old amp. Forced to use this evil software.<//>"i watched dyna snort 6 lines of cocaine yesterday as he plead his allegiance to line 6"<//><b>Effect:</b><.>Neo Bodur is 10x more efficient.
 		cost:50 neobodur
 		passive:multiply bucket yield of neobodur by 10
+		passive:multiply cd yield of neobodur by 10
 		req:(neobodur>=25)
 		icon:icons[7,5]
 	*super
@@ -514,6 +518,7 @@ Upgrades
 		desc:If you collect the 7 chaos emeralds... wait no<//><b>Effect:</b><.>Neo Bodur is 50x more efficient.
 		cost:100 neobodur
 		passive:multiply bucket yield of neobodur by 50
+		passive:multiply cd yield of neobodur by 50
 		req:(neobodur>=50)
 		icon:icons[7,6]
 	//neolaurence
@@ -522,6 +527,7 @@ Upgrades
 		desc:new guitars?<//><b>Effect:</b><.>Neo Laurence is 2x more efficient
 		cost:2 neolaurence
 		passive:multiply bucket yield of neolaurence by 2
+		passive:multiply cd yield of neolaurence by 2
 		req:(neolaurence>=1)
 		icon:icons[8,2]
 	*nailpolish
@@ -529,6 +535,7 @@ Upgrades
 		desc:Do not drink.<//><b>Effect:</b><.>Neo Laurence is 2x more efficient.
 		cost:10 neolaurence
 		passive:multiply bucket yield of neolaurence by 2
+		passive:multiply cd yield of neolaurence by 2
 		req:(neolaurence>=5)
 		icon:icons[8,3]
 	*pubes
@@ -536,6 +543,7 @@ Upgrades
 		desc:You can only do so good of a job.<//><b>Effect:</b><.>Neo Laurence is 2x more efficient.
 		cost:25 neolaurence
 		passive:multiply bucket yield of neolaurence by 2
+		passive:multiply cd yield of neolaurence by 2
 		req:(neolaurence>=10)
 		icon:icons[8,4]
 	*fuckbucket
@@ -543,6 +551,7 @@ Upgrades
 		desc:Please don't.<//><b>Effect:</b><.>Neo Laurence is 10x more efficient.
 		cost:50 neolaurence
 		passive:multiply bucket yield of neolaurence by 10
+		passive:multiply cd yield of neolaurence by 10
 		req:(neolaurence>=25)
 		icon:icons[8,5]
 	*soul
@@ -550,6 +559,7 @@ Upgrades
 		desc:...𝖄𝕺𝖀𝕽𝕿𝕴𝕸𝕰𝕴𝕾𝕾𝕺𝕺𝕹...<//><b>Effect:</b><.>Neo Laurence is 50x more efficient.
 		cost:100 neolaurence
 		passive:multiply bucket yield of neolaurence by 50
+		passive:multiply cd yield of neolaurence by 50
 		req:(neolaurence>=50)
 		icon:icons[8,6]
 	//neomumu
@@ -558,6 +568,7 @@ Upgrades
 		desc:A pin with she/her pronouns.<//><b>Effect:</b><.>Neo Mumu is 2x more efficient
 		cost:2 neomumu
 		passive:multiply bucket yield of neomumu by 2
+		passive:multiply cd yield of neomumu by 2
 		req:(neomumu>=1)
 		icon:icons[9,2]
 	*transflag
@@ -565,6 +576,7 @@ Upgrades
 		desc:A trans flag to put in your room! Not ironed.<//><b>Effect:</b><.>Neo Mumu is 2x more efficient.
 		cost:10 neomumu
 		passive:multiply bucket yield of neomumu by 2
+		passive:multiply cd yield of neomumu by 2
 		req:(neomumu>=5)
 		icon:icons[9,3]
 	*voicetrain
@@ -572,6 +584,7 @@ Upgrades
 		desc:Voice training trains your voice into a trained voice.<//><b>Effect:</b><.>Neo Mumu is 2x more efficient.
 		cost:25 neomumu
 		passive:multiply bucket yield of neomumu by 2
+		passive:multiply cd yield of neomumu by 2
 		req:(neomumu>=10)
 		icon:icons[9,4]
 	*estrogen
@@ -579,6 +592,7 @@ Upgrades
 		desc:YOU can get HRT for selling only 50 of yourself!!<//><b>Effect:</b><.>Neo Mumu is 10x more efficient.
 		cost:50 neomumu
 		passive:multiply bucket yield of neomumu by 10
+		passive:multiply cd yield of neomumu by 10
 		req:(neomumu>=25)
 		icon:icons[9,5]
 	*medal
@@ -586,6 +600,7 @@ Upgrades
 		desc:No idea what it does, but it certainly looks cool.<//><b>Effect:</b><.>Neo Mumu is 50x more efficient.
 		cost:100 neomumu
 		passive:multiply bucket yield of neomumu by 50
+		passive:multiply cd yield of neomumu by 50
 		req:(neomumu>=50)
 		icon:icons[9,6]
 	//bungle
@@ -594,6 +609,7 @@ Upgrades
 		desc:WHO THE FUCK PUT COTTAGE CHEESE IN MY BOWEL OF CHILEY????<//><b>Effect:</b><.>All* members of Mr. Bungle are 2x more efficient
 		cost:2 bungle
 		passive:multiply bucket yield of bungle by 2
+		passive:multiply cd yield of bungle by 2
 		req:(bungle>=1)
 		icon:icons[10,2]
 	*ou818
@@ -601,6 +617,7 @@ Upgrades
 		desc:O-U-8-1-8<//><b>Effect:</b><.>All* members of Mr. Bungle are 2x more efficient.
 		cost:10 bungle
 		passive:multiply bucket yield of bungle by 2
+		passive:multiply cd yield of bungle by 2
 		req:(bungle>=5)
 		icon:icons[10,3]
 	*egg
@@ -608,6 +625,7 @@ Upgrades
 		desc:Egg.<//><b>Effect:</b><.>All* members of Mr. Bungle are 2x more efficient.
 		cost:25 bungle
 		passive:multiply bucket yield of bungle by 2
+		passive:multiply cd yield of bungle by 2
 		req:(bungle>=10)
 		icon:icons[10,4]
 	*bends
@@ -615,6 +633,7 @@ Upgrades
 		desc:Not Radiohead.<//><b>Effect:</b><.>All* members of Mr. Bungle are 10x more efficient.
 		cost:50 bungle
 		passive:multiply bucket yield of bungle by 10
+		passive:multiply cd yield of bungle by 10
 		req:(bungle>=25)
 		icon:icons[10,5]
 	*rhcp
@@ -622,5 +641,6 @@ Upgrades
 		desc:Makes shit music and is a pedo... what's not to hate?<//><b>Effect:</b><.>All* members of Mr. Bungle are 50x more efficient.
 		cost:100 bungle
 		passive:multiply bucket yield of bungle by 50
+		passive:multiply cd yield of bungle by 50
 		req:(neomumu>=50)
 		icon:icons[10,6]
