@@ -33,7 +33,7 @@ Buttons
 	    desc:Click here to gain more buckets.. and each bucket has a small chance of buying a CD!!! Cannibalism between buckets will not be tolerated.
 	    on click:anim icon wobble
 		on click:yield 1 bucket
-		on click:if (chance(0.5%)) yield 1 cd
+		on click:if (chance(1%)) yield 1 cd
 		icon:https://archive.cojumpendium.net/go/secret/clicker/bucket.png?1
 		no text
 		class:bigButton hasFlares
@@ -139,19 +139,19 @@ Upgrades
 		name:Flyer
 		desc:Make flyers in hopes of finding bandmates. You struggle.<//><b>Effect:</b><.>+1 bucket/click
 		cost:50 buckets
-		passive:increase yield of bucketButton by 1
+		passive:increase bucket yield of bucketButton by 1
 		req:10 buckets:earned
 	*website
 		name:Website
 		desc:Create the website for the band!<//><b>Effect:</b><.>+2 buckets/click
 		cost:500 buckets
-		passive:increase yield of bucketButton by 2
+		passive:increase bucket yield of bucketButton by 2
 		req:100 buckets:earned
 	*ve
 		name:ViciousEnterprises
 		desc:Upload your demos online. Don't worry about the political stances of the admins.<//><b>Effect:</b><.>+6 buckets/click
 		cost:5000 buckets
-		passive:increase yield of bucketButton by 6
+		passive:increase bucket yield of bucketButton by 6
 		req:(bodur>=1 and laurence>=1 and udabn>=1 and protomumu>=1 and protono>=1)
 	*duder
 		name:1st Asteroid Chainsaw Classic
