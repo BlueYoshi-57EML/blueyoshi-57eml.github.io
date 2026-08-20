@@ -199,7 +199,7 @@ Upgrades
 		cost:25 cds
 		passive:multiply yield of buckets by 1.1
 		passive:increase bucket yield of bucketButton by 1
-		req:(duderstadt>=1)
+		req:(duder>=1)
 		icon:icons[3,0]
 	*aba
 		name:Anthropomorphic Bible Assault EP
