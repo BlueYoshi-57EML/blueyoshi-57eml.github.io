@@ -33,7 +33,7 @@ Buttons
 	    desc:Click here to gain more buckets.. and each bucket has a small chance of buying a CD!!! Cannibalism between buckets will not be tolerated.
 	    on click:anim icon wobble
 		on click:yield 1 bucket
-		on click:if (chance(0.05%)) yield 1 cd
+		on click:if (chance(0.1%)) yield 1 cd
 		icon:https://archive.cojumpendium.net/go/secret/clicker/bucket.png?1
 		no text
 		class:bigButton hasFlares
