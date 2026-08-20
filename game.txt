@@ -153,12 +153,37 @@ Upgrades
 		cost:5000 buckets
 		passive:increase bucket yield of bucketButton by 6
 		req:(bodur>=1 and laurence>=1 and udabn>=1 and protomumu>=1 and protono>=1)
+	*shirt
+		name:Shirts
+		desc:Make shirts!<//><b>Effect:</b><.>x1.5 buckets/click
+		cost:500000 buckets
+		passive:multiply bucket yield of bucketButton by 1.5
+		req:(ve>=1)
 	*duder
 		name:1st Asteroid Chainsaw Classic
 		desc:Play your first show at the Duderstadt Center!<//><b>Effect:</b><.>buckets/click x2
 		cost:1000000 buckets
 		passive:multiply bucket yield of bucketButton by 2
-		req:(bodur>=1 and laurence>=1 and udabn>=1 and mumu>=1 and capno>=1)
+		req:(bodur>=1 and laurence>=1 and udabn>=1 and mumu>=1 and capno>=1 and gd>=1)
+	*emergenza
+		name:Emergenza
+		desc:Enroll in the Emergenza battle of the bands in hopes of winning a slot at the Warped Tour and studio sessions!<//><b>Effect:</b><.>buckets/click x2
+		cost:10000000 buckets
+		passive:multiply bucket yield of bucketButton by 2
+		req:(54cd>=1)
+	*farewell
+		name:Farewell show
+		desc:Last show before leaving Ann Arbor. Totally recockulous.<//><b>Effect:</b><.>buckets/click x2
+		cost:50000000 buckets
+		passive:multiply bucket yield of bucketButton by 2
+		req:(aba>=1)
+	*alibi
+		name:Bizarre Reunion
+		desc:Second generation before the birdseye...<//><b>Effect:</b><.>buckets/click x4
+		cost:250000000 buckets
+		passive:multiply bucket yield of bucketButton by 4
+		req:(turkoff>=1)
+		
 
 	//albums
 	*gd
@@ -168,6 +193,38 @@ Upgrades
 		passive:multiply yield of buckets by 1.1
 		req:(bodur>=1 and laurence>=1 and udabn>=1 and protomumu>=1 and protono>=1)
 		icon:icons[2,0]
+	*54cd
+		name:5/4 single
+		desc:A single... containing 5/4!<//><b>Effect:</b><.>+10% bucket production. CD production +1.
+		cost:25 cds
+		passive:multiply yield of buckets by 1.1
+		passive:increase bucket yield of bucketButton by 1
+		req:(duderstadt>=1)
+		icon:icons[3,0]
+	*aba
+		name:Anthropomorphic Bible Assault EP
+		desc:Your first proper studio recording!<//><b>Effect:</b><.>+15% bucket production. CD production +2.
+		cost:50 cds
+		passive:multiply yield of buckets by 1.15
+		passive:increase bucket yield of bucketButton by 2
+		req:(emergenza>=1)
+		icon:icons[4,0]
+	*turkoff
+		name:Turk Off EP
+		desc:...it's just ABA again!<//><b>Effect:</b><.>+15% bucket production. CD production +2.
+		cost:50 cds
+		passive:multiply yield of buckets by 1.15
+		passive:increase bucket yield of bucketButton by 2
+		req:(farewell>=1)
+		icon:icons[5,0]
+	*remix
+		name:2010 Remix
+		desc:Hahaha. Very funny.<//><b>Effect:</b><.>+20% bucket production. CD production +2.
+		cost:75 cds
+		passive:multiply yield of buckets by 1.2
+		passive:increase bucket yield of bucketButton by 2
+		req:(alibi>=1)
+		icon:icons[6,0]
 
 	//instruments
 	//bodur
