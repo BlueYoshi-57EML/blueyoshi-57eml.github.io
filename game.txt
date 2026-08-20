@@ -2,6 +2,7 @@ Let's make a game!
 	name:cOJUM cLICKER!!!!!!1!!1!!1
 	by:blueyoshi
 	created:20/08/2026
+//a
 Settings
 	background:https://concerts.cojumpendium.net/back2final.png
 	building cost increase:115%
