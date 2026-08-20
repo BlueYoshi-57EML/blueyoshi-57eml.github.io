@@ -197,7 +197,7 @@ Upgrades
 		desc:Yo my name is Bodur and I've got a big (REDACTED)<//><b>Effect:</b><.>Bodur is 10x more efficient.
 		cost:50 bodur
 		passive:multiply bucket yield of bodur by 10
-		req:(bodur>=10)
+		req:(bodur>=25)
 		icon:icons[0,5]
 	*sax
 		name:Saxophone
@@ -233,7 +233,7 @@ Upgrades
 		desc:Wow, what a Slipknot knock-off...<//><b>Effect:</b><.>"Laurence" is 10x more efficient.
 		cost:50 laurence
 		passive:multiply bucket yield of laurence by 10
-		req:(laurence>=10)
+		req:(laurence>=25)
 		icon:icons[1,5]
 	*drill
 		name:Drill
@@ -269,7 +269,7 @@ Upgrades
 		desc:You keep them.<//><b>Effect:</b><.>Proto Mumutits is 10x more efficient.
 		cost:50 protomumu
 		passive:multiply bucket yield of protomumu by 10
-		req:(protomumu>=10)
+		req:(protomumu>=25)
 		icon:icons[2,5]
 	*grifter
 		name:Grifter
@@ -305,7 +305,7 @@ Upgrades
 		desc:You can make something vaguely ressembling a US flag on your mask with it.<//><b>Effect:</b><.>Proto No is 10x more efficient.
 		cost:50 protono
 		passive:multiply bucket yield of protono by 10
-		req:(protono>=10)
+		req:(protono>=25)
 		icon:icons[3,5]
 	*love
 		name:Love
@@ -341,7 +341,7 @@ Upgrades
 		desc:Not safe for work.<//><b>Effect:</b><.>Udabn is 10x more efficient.
 		cost:50 udabn
 		passive:multiply bucket yield of udabn by 10
-		req:(udabn>=10)
+		req:(udabn>=25)
 		icon:icons[4,5]
 	*booze
 		name:Booze
@@ -377,7 +377,7 @@ Upgrades
 		desc:hey simon... your mind. yeah. well INSIDE your mind. inside the mind of HEH GET IT<//><b>Effect:</b><.>Mumutits is 10x more efficient.
 		cost:50 mumu
 		passive:multiply bucket yield of mumu by 10
-		req:(mumu>=10)
+		req:(mumu>=25)
 		icon:icons[5,5]
 	*glockenspiel
 		name:Glockenspiel
@@ -413,7 +413,7 @@ Upgrades
 		desc:Tastes way better than human flesh, according to SLOAR, the INSATIABLE. Probably all the Red 40 they put in it.<//><b>Effect:</b><.>Captain No is 10x more efficient.
 		cost:50 capno
 		passive:multiply bucket yield of capno by 10
-		req:(capno>=10)
+		req:(capno>=25)
 		icon:icons[6,5]
 	*weed
 		name:Weed
@@ -449,7 +449,7 @@ Upgrades
 		desc:Tried using my old amp. Forced to use this evil software.<//>"i watched dyna snort 6 lines of cocaine yesterday as he plead his allegiance to line 6"<//><b>Effect:</b><.>Neo Bodur is 10x more efficient.
 		cost:50 neobodur
 		passive:multiply bucket yield of neobodur by 10
-		req:(neobodur>=10)
+		req:(neobodur>=25)
 		icon:icons[7,5]
 	*super
 		name:Super form
@@ -485,7 +485,7 @@ Upgrades
 		desc:Please don't.<//><b>Effect:</b><.>Neo Laurence is 10x more efficient.
 		cost:50 neolaurence
 		passive:multiply bucket yield of neolaurence by 10
-		req:(neolaurence>=10)
+		req:(neolaurence>=25)
 		icon:icons[8,5]
 	*soul
 		name:SOUL EATING
@@ -521,7 +521,7 @@ Upgrades
 		desc:YOU can get HRT for selling only 50 of yourself!!<//><b>Effect:</b><.>Neo Mumu is 10x more efficient.
 		cost:50 neomumu
 		passive:multiply bucket yield of neomumu by 10
-		req:(neomumu>=10)
+		req:(neomumu>=25)
 		icon:icons[9,5]
 	*medal
 		name:That weird face medal thing on your forehead
@@ -557,7 +557,7 @@ Upgrades
 		desc:Not Radiohead.<//><b>Effect:</b><.>All* members of Mr. Bungle are 10x more efficient.
 		cost:50 bungle
 		passive:multiply bucket yield of bungle by 10
-		req:(bungle>=10)
+		req:(bungle>=25)
 		icon:icons[10,5]
 	*rhcp
 		name:Kill Anthony Kiedis
