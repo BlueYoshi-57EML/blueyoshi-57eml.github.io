@@ -1,0 +1,626 @@
+Let's make a game!
+	name:cOJUM cLICKER!!!!!!1!!1!!1
+	by:blueyoshi
+	created:20/08/2026
+//a
+Settings
+	background:https://concerts.cojumpendium.net/back2final.png
+	building cost increase:115%
+	building cost refund:50%
+	spritesheet:icons, 48 by 48, https://archive.cojumpendium.net/go/secret/clicker/icons.png
+Layout
+	*main
+  		contains:res, buttons
+  	*res
+    	contains:Resources
+    	class:fullWidth
+  	*buttons
+    	contains:Buttons
+	*store
+  		contains:buildings, upgrades
+  	*buildings
+    	contains:BulkDisplay, Buildings
+    	header:Bandmates
+    	tooltip origin:left
+  	*upgrades
+    	contains:Upgrades
+    	header:Upgrades
+    	costs:hide
+    	names:hide
+		
+Buttons
+	*bucketButton
+	    name:Magical duplicating bucket.
+	    desc:Click here to gain more buckets.. and each bucket has a small chance of buying a CD!!! Cannibalism between buckets will not be tolerated.
+	    on click:anim icon wobble
+		on click:yield 1 bucket
+		on click:if (chance(0.5%)) yield 1 cd
+		icon:https://archive.cojumpendium.net/go/secret/clicker/bucket.png?1
+		no text
+		class:bigButton hasFlares
+		icon class:shadowed
+		
+Resources
+    *bucket|buckets
+        name:Bucket|Buckets
+        desc:You can sell your buckets to buy stuff which makes you earn even MORE buckets!
+        show earned
+		icon:icons[0,0]
+    *cd|cds
+        name:CD|CDs
+        desc:Your current number of CD sales... well that isn't a lot. FANS BUY MY MUSIC PLEASE
+		icon:icons[1,0]
+
+Buildings
+	*bodur
+		name:Bodur
+		desc:Bodur the Clumsy... playing every instrument imaginable<//><b>Effect:</b><.>1 bucket every 5 seconds.
+		cost:30 buckets
+        on tick:yield 0.2 buckets
+		unlocked
+		icon:icons[0,1]
+	*laurence
+		name:"Laurence"
+		desc:"Laurence" a.k.a. Oktabis the Keeper of the River of Lost blahblahblah you get the point<//><b>Effect:</b><.>5 buckets every second.
+		cost:200 buckets
+		on tick:yield 5 buckets 
+		req:54 buckets:earned
+		icon:icons[1,1]
+	*protomumu
+		name:Proto Mumutits
+		desc:Mumuti... huh? May or may not keep dark secrets.<//><b>Effect:</b><.>25 buckets every second.
+		cost:1000 buckets
+		on tick:yield 25 buckets
+		req:500 buckets:earned
+		icon:icons[2,1]
+	*protono
+		name:Proto No
+		desc:The cooler design.<//><b>Effect:</b><.>74 buckets every second.
+		cost:25000 buckets
+		on tick:yield 74 buckets
+		req:10000 buckets:earned
+		icon:icons[3,1]
+	*udabn
+		name:Udabn
+		desc:Lieutenant of the low end. Is to be feared/feared not. (shameless CinC reference, I apologize)<//><b>Effect:</b><.>1500 buckets every second.
+		cost:100000 buckets
+		on tick:yield 500 buckets
+		req:50000 buckets:earned
+		icon:icons[4,1]
+	*mumu
+		name:Mumutits
+		desc:Sultan of the Strings... and sour cotton candy.<//><b>Effect:</b><.>10000 buckets every second.
+		cost:500000 buckets
+		on tick:yield 1500 buckets
+		req:150000 buckets:earned
+		icon:icons[5,1]
+	*capno
+		name:Captain No
+		desc:Ba dum tss. Tamer of SLOAR, the INSATIABLE.<//><b>Effect:</b><.>50000 buckets every second.
+		cost:2500000 buckets
+		on tick:yield 5000 buckets
+		req:1000000 buckets:earned
+		icon:icons[6,1]
+	*neobodur
+		name:Neo Bodur
+		desc:So... magnificent.<//><b>Effect:</b><.>134340 buckets every second, plus 1 CD every 10 seconds.
+		cost:250000000 buckets, 10 cds
+		on tick:yield 134340 buckets
+		on tick:yield 0.1 cds
+		req:5000000 buckets:earned
+		icon:icons[7,1]
+	*neolaurence
+		name:Neo Laurence
+		desc:𝖎'𝖑𝖑 𝖉𝖊𝖛𝖔𝖚𝖗 𝖞𝖔𝖚𝖗 𝖘𝖔𝖚𝖑𝖘<//><b>Effect:</b><.>1000000 buckets every second, plus 1 CD every second.
+		cost:1000000000 buckets, 25 cds
+		on tick:yield 1000000 buckets
+		on tick:yield 1 cd
+		req:500000000 buckets:earned
+		icon:icons[8,1]
+	*neomumu
+		name:Neo Mumu
+		desc:🏳️‍⚧️🏳️‍⚧️🏳️‍⚧️<//><b>Effect:</b><.>25000000 buckets every second, plus 5 CDs every second.
+		cost:10000000000 buckets, 100 cds
+		on tick:yield 25000000 buckets
+		on tick:yield 1 cd
+		req:1500000000 buckets:earned
+		icon:icons[9,1]
+	*bungle
+		name:Every* single member of Mr. Bungle
+		desc:*Except Theo Lengyel which is currently in prison for killing his wife.<//><b>Effect:</b><.>1000000000 buckets every second, and 500 CDs every second.
+		cost:999999999999 buckets, 99999 cds
+		on tick:yield 1000000000 buckets
+		on tick:yield 500 cds
+		req:134340134340 buckets:earned
+		icon:icons[10,1]
+
+Upgrades
+	//general
+	*flyer
+		name:Flyer
+		desc:Make flyers in hopes of finding bandmates. You struggle.<//><b>Effect:</b><.>+1 bucket/click
+		cost:50 buckets
+		passive:increase bucket yield of bucketButton by 1
+		req:10 buckets:earned
+	*website
+		name:Website
+		desc:Create the website for the band!<//><b>Effect:</b><.>+2 buckets/click
+		cost:500 buckets
+		passive:increase bucket yield of bucketButton by 2
+		req:100 buckets:earned
+	*ve
+		name:ViciousEnterprises
+		desc:Upload your demos online. Don't worry about the political stances of the admins.<//><b>Effect:</b><.>+6 buckets/click
+		cost:5000 buckets
+		passive:increase bucket yield of bucketButton by 6
+		req:(bodur>=1 and laurence>=1 and udabn>=1 and protomumu>=1 and protono>=1)
+	*shirt
+		name:Shirts
+		desc:Make shirts!<//><b>Effect:</b><.>x1.5 buckets/click
+		cost:500000 buckets
+		passive:multiply bucket yield of bucketButton by 1.5
+		req:(ve>=1)
+	*duder
+		name:1st Asteroid Chainsaw Classic
+		desc:Play your first show at the Duderstadt Center!<//><b>Effect:</b><.>buckets/click x2
+		cost:1000000 buckets
+		passive:multiply bucket yield of bucketButton by 2
+		req:(bodur>=1 and laurence>=1 and udabn>=1 and mumu>=1 and capno>=1 and gd>=1)
+	*emergenza
+		name:Emergenza
+		desc:Enroll in the Emergenza battle of the bands in hopes of winning a slot at the Warped Tour and studio sessions!<//><b>Effect:</b><.>buckets/click x2
+		cost:10000000 buckets
+		passive:multiply bucket yield of bucketButton by 2
+		req:(54cd>=1)
+	*farewell
+		name:Farewell show
+		desc:Last show before leaving Ann Arbor. Totally recockulous.<//><b>Effect:</b><.>buckets/click x2
+		cost:50000000 buckets
+		passive:multiply bucket yield of bucketButton by 2
+		req:(aba>=1)
+	*alibi
+		name:Bizarre Reunion
+		desc:Second generation before the birdseye...<//><b>Effect:</b><.>buckets/click x4
+		cost:250000000 buckets
+		passive:multiply bucket yield of bucketButton by 4
+		req:(turkoff>=1)
+		
+
+	//albums
+	*gd
+		name:The Greatest Demo CD in the Universe
+		desc:Release your first demo album, featuring classics such as Mome Wrath!<//><b>Effect:</b><.>+10% bucket production.
+		cost:10 cds
+		passive:multiply yield of buckets by 1.1
+		req:(bodur>=1 and laurence>=1 and udabn>=1 and protomumu>=1 and protono>=1)
+		icon:icons[2,0]
+	*54cd
+		name:5/4 single
+		desc:A single... containing 5/4!<//><b>Effect:</b><.>+10% bucket production. CD production +1.
+		cost:25 cds
+		passive:multiply yield of buckets by 1.1
+		passive:increase bucket yield of bucketButton by 1
+		req:(duder>=1)
+		icon:icons[3,0]
+	*aba
+		name:Anthropomorphic Bible Assault EP
+		desc:Your first proper studio recording!<//><b>Effect:</b><.>+15% bucket production. CD production +2.
+		cost:50 cds
+		passive:multiply yield of buckets by 1.15
+		passive:increase bucket yield of bucketButton by 2
+		req:(emergenza>=1)
+		icon:icons[4,0]
+	*turkoff
+		name:Turk Off EP
+		desc:...it's just ABA again!<//><b>Effect:</b><.>+15% bucket production. CD production +2.
+		cost:50 cds
+		passive:multiply yield of buckets by 1.15
+		passive:increase bucket yield of bucketButton by 2
+		req:(farewell>=1)
+		icon:icons[5,0]
+	*remix
+		name:2010 Remix
+		desc:Hahaha. Very funny.<//><b>Effect:</b><.>+20% bucket production. CD production +2.
+		cost:75 cds
+		passive:multiply yield of buckets by 1.2
+		passive:increase bucket yield of bucketButton by 2
+		req:(alibi>=1)
+		icon:icons[6,0]
+
+	//instruments
+	//bodur
+	*dillon
+		name:Dillon
+		desc:When I say jump...<//><b>Effect:</b><.>Bodur is 2x more efficient.
+		cost:2 bodur
+		passive:multiply bucket yield of bodur by 2
+		req:(bodur>=1)
+		icon:icons[0,2]
+	*baglama
+		name:Baḡlama
+		desc:4 the ♥ of $, what a cool instrument!<//><b>Effect:</b><.>Bodur is 2x more efficient.
+		cost:10 bodur
+		passive:multiply bucket yield of bodur by 2
+		req:(bodur>=5)
+		icon:icons[0,3]
+	*accordion
+		name:Accordion
+		desc:There's the motivation...<//><b>Effect:</b><.>Bodur is 2x more efficient.
+		cost:25 bodur
+		passive:multiply bucket yield of bodur by 2
+		req:(bodur>=10)
+		icon:icons[0,4]
+	*bagpipes
+		name:Bagpipes
+		desc:Yo my name is Bodur and I've got a big (REDACTED)<//><b>Effect:</b><.>Bodur is 10x more efficient.
+		cost:50 bodur
+		passive:multiply bucket yield of bodur by 10
+		req:(bodur>=25)
+		icon:icons[0,5]
+	*sax
+		name:Saxophone
+		desc:May help you find the second unheard message.<//><b>Effect:</b><.>Bodur is 50x more efficient.
+		cost:100 bodur
+		passive:multiply bucket yield of bodur by 50
+		req:(bodur>=50)
+		icon:icons[0,6]
+	//laurence
+	*epiphone
+		name:Epiphone
+		desc:Death ray not (yet) included.<//><b>Effect:</b><.>"Laurence" is 2x more efficient.
+		cost:2 laurence
+		passive:multiply bucket yield of laurence by 2
+		req:(laurence>=1)
+		icon:icons[1,2]
+	*middle
+		name:Middle finger
+		desc:How rude.<//><b>Effect:</b><.>"Laurence" is 2x more efficient.
+		cost:10 laurence
+		passive:multiply bucket yield of laurence by 2
+		req:(laurence>=5)
+		icon:icons[1,3]
+	*deathray
+		name:Death Ray
+		desc:Illegal in 74 U.S. states.<//><b>Effect:</b><.>"Laurence" is 2x more efficient.
+		cost:25 laurence
+		passive:multiply bucket yield of laurence by 2
+		req:(laurence>=10)
+		icon:icons[1,4]
+	*keg
+		name:Beer Keg
+		desc:Wow, what a Slipknot knock-off...<//><b>Effect:</b><.>"Laurence" is 10x more efficient.
+		cost:50 laurence
+		passive:multiply bucket yield of laurence by 10
+		req:(laurence>=25)
+		icon:icons[1,5]
+	*drill
+		name:Drill
+		desc:If used on a puzzle, it makes puzzle dust. Like that one song. You know.<//><b>Effect:</b><.>"Laurence" is 50x more efficient.
+		cost:100 laurence
+		passive:multiply bucket yield of laurence by 50
+		req:(laurence>=50)
+		icon:icons[1,6]
+	//protomumu
+	*shocker
+		name:Shocker Mask
+		desc:Blue, yellow and black... probably not worth anything<//><b>Effect:</b><.>Proto Mumutits is 2x more efficient.
+		cost:2 protomumu
+		passive:multiply bucket yield of protomumu by 2
+		req:(protomumu>=1)
+		icon:icons[2,2]
+	*cape
+		name:Bodur's Cape
+		desc:Red cape shamelessly stolen from Bodur. It even has his copyright on it!<//><b>Effect:</b><.>Proto Mumutits is 2x more efficient.
+		cost:10 protomumu
+		passive:multiply bucket yield of protomumu by 2
+		req:(protomumu>=5)
+		icon:icons[2,3]
+	*hue
+		name:Hue-shifting
+		desc:Thanks to the power of Adobe Photoshop 7.0, become gray and pink.<//><b>Effect:</b><.>Proto Mumutits is 2x more efficient.
+		cost:25 protomumu
+		passive:multiply bucket yield of protomumu by 2
+		req:(protomumu>=10)
+		icon:icons[2,4]
+	*darksecrets
+		name:Dark Secrets
+		desc:You keep them.<//><b>Effect:</b><.>Proto Mumutits is 10x more efficient.
+		cost:50 protomumu
+		passive:multiply bucket yield of protomumu by 10
+		req:(protomumu>=25)
+		icon:icons[2,5]
+	*grifter
+		name:Grifter
+		desc:Become a right-wing grifter on Twitte-wait, what?<//><b>Effect:</b><.>Proto Mumutits is 50x more efficient.
+		cost:100 protomumu
+		passive:multiply bucket yield of protomumu by 50
+		req:(protomumu>=50)
+		icon:icons[2,6]
+	//protono
+	*actualdrumset
+		name:ACTUAL drumset
+		desc:An ACTUAL drumset making ACTUAL drum noises when you hit on it.<//><b>Effect:</b><.>Proto No is 2x more efficient.
+		cost:2 protono
+		passive:multiply bucket yield of protono by 2
+		req:(protono>=1)
+		icon:icons[3,2]
+	*banana
+		name:Banana
+		desc:One of your two "drumsticks".<//><b>Effect:</b><.>Proto No is 2x more efficient.
+		cost:10 protono
+		passive:multiply bucket yield of protono by 2
+		req:(protono>=5)
+		icon:icons[3,3]
+	*deadfish
+		name:Dead fish
+		desc:The second of your two "drumsticks".<//><b>Effect:</b><.>Proto No is 2x more efficient.
+		cost:25 protono
+		passive:multiply bucket yield of protono by 2
+		req:(protono>=10)
+		icon:icons[3,4]
+	*duct
+		name:Red ducttape
+		desc:You can make something vaguely ressembling a US flag on your mask with it.<//><b>Effect:</b><.>Proto No is 10x more efficient.
+		cost:50 protono
+		passive:multiply bucket yield of protono by 10
+		req:(protono>=25)
+		icon:icons[3,5]
+	*love
+		name:Love
+		desc:<3<//><b>Effect:</b><.>Proto No is 50x more efficient.
+		cost:100 protono
+		passive:multiply bucket yield of protono by 50
+		req:(protono>=50)
+		icon:icons[3,6]
+	//udabn
+	*bass
+		name:Bass
+		desc:Cuz he's the lieutenant of the LOW END. get it...<//><b>Effect:</b><.>Udabn is 2x more efficient
+		cost:2 udabn
+		passive:multiply bucket yield of udabn by 2
+		req:(udabn>=1)
+		icon:icons[4,2]
+	*djembe
+		name:Djembe
+		desc:Useful if you over oil filter mourn asteroid of chainsaw.<//><b>Effect:</b><.>Udabn is 2x more efficient.
+		cost:10 udabn
+		passive:multiply bucket yield of udabn by 2
+		req:(udabn>=5)
+		icon:icons[4,3]
+	*pistachio
+		name:Pistachios
+		desc:They're growing under your cape at this very moment.<//><b>Effect:</b><.>Udabn is 2x more efficient.
+		cost:25 udabn
+		passive:multiply bucket yield of udabn by 2
+		req:(udabn>=10)
+		icon:icons[4,4]
+	*seesaw
+		name:Seesaw (broken)
+		desc:Not safe for work.<//><b>Effect:</b><.>Udabn is 10x more efficient.
+		cost:50 udabn
+		passive:multiply bucket yield of udabn by 10
+		req:(udabn>=25)
+		icon:icons[4,5]
+	*booze
+		name:Booze
+		desc:fgdh:gwchsdjvhg;kh:lgv;kqsdfvqsdhtgih!bf,,mgvsjkqflhgdv<//><b>Effect:</b><.>Udabn is 50x more efficient.
+		cost:100 udabn
+		passive:multiply bucket yield of udabn by 50
+		req:(udabn>=50)
+		icon:icons[4,6]
+	//mumu
+	*strat
+		name:Stratocaster
+		desc:Seriously... THREE guitarists??<//><b>Effect:</b><.>Mumutits is 2x more efficient
+		cost:2 mumu
+		passive:multiply bucket yield of mumu by 2
+		req:(mumu>=1)
+		icon:icons[5,2]
+	*saw
+		name:Musical saw
+		desc:Not suitable for killing people. Only music.<//><b>Effect:</b><.>Mumutits is 2x more efficient.
+		cost:10 mumu
+		passive:multiply bucket yield of mumu by 2
+		req:(mumu>=5)
+		icon:icons[5,3]
+	*barrel
+		name:Traffic barrel
+		desc:Will you not bang with me?<//><b>Effect:</b><.>Mumutits is 2x more efficient.
+		cost:25 mumu
+		passive:multiply bucket yield of mumu by 2
+		req:(mumu>=10)
+		icon:icons[5,4]
+	*keyboard
+		name:Keyboard
+		desc:hey simon... your mind. yeah. well INSIDE your mind. inside the mind of HEH GET IT<//><b>Effect:</b><.>Mumutits is 10x more efficient.
+		cost:50 mumu
+		passive:multiply bucket yield of mumu by 10
+		req:(mumu>=25)
+		icon:icons[5,5]
+	*glockenspiel
+		name:Glockenspiel
+		desc:Alone... at the edge of a universe-NO they didn't play that song. sorry grunky<//><b>Effect:</b><.>Mumutits is 50x more efficient.
+		cost:100 mumu
+		passive:multiply bucket yield of mumu by 50
+		req:(mumu>=50)
+		icon:icons[5,6]
+	//capno
+	*sloar
+		name:SLOAR, the INSATIABLE
+		desc:The Seventh Horror from the Beyond, this creature makes noises ressembling drum sounds when hungry for man flesh. I wonder if I can feed it anything else though...<//><b>Effect:</b><.>Captain No is 2x more efficient
+		cost:2 capno
+		passive:multiply bucket yield of capno by 2
+		req:(capno>=1)
+		icon:icons[6,2]
+	*sticks
+		name:Legendary wooden prodding sticks
+		desc:Tames SLOAR, the INSATIABLE.<//><b>Effect:</b><.>Captain No is 2x more efficient.
+		cost:10 capno
+		passive:multiply bucket yield of capno by 2
+		req:(capno>=5)
+		icon:icons[6,3]
+	*flag
+		name:US Flag
+		desc:BCOME A REAL AMERCIAN THX 2 THIS EPIC AMRICAN FLAG!!1!!!1 GET OWN'D LIBERALZ<//><b>Effect:</b><.>Captain No is 2x more efficient.
+		cost:25 capno
+		passive:multiply bucket yield of capno by 2
+		req:(capno>=10)
+		icon:icons[6,4]
+	*cheetos
+		name:Cheetos
+		desc:Tastes way better than human flesh, according to SLOAR, the INSATIABLE. Probably all the Red 40 they put in it.<//><b>Effect:</b><.>Captain No is 10x more efficient.
+		cost:50 capno
+		passive:multiply bucket yield of capno by 10
+		req:(capno>=25)
+		icon:icons[6,5]
+	*weed
+		name:Weed
+		desc:Forget all your responsibilities, get high today!<//><b>Effect:</b><.>Captain No is 50x more efficient.
+		cost:100 capno
+		passive:multiply bucket yield of capno by 50
+		req:(capno>=50)
+		icon:icons[6,6]
+	//neobodur
+	*kiesel
+		name:Kiesel DC
+		desc:A custom-built Kiesel DC guitar!<//><b>Effect:</b><.>Neo Bodur is 2x more efficient
+		cost:2 neobodur
+		passive:multiply bucket yield of neobodur by 2
+		req:(neobodur>=1)
+		icon:icons[7,2]
+	*iem
+		name:In-ear monitors
+		desc:You can now hear the unheard. TESTING... WATERMELONS CABBAGES!!<//><b>Effect:</b><.>Neo Bodur is 2x more efficient.
+		cost:10 neobodur
+		passive:multiply bucket yield of neobodur by 2
+		req:(neobodur>=5)
+		icon:icons[7,3]
+	*3d
+		name:3D model
+		desc:Start your V-Tubing career!<//><b>Effect:</b><.>Neo Bodur is 2x more efficient.
+		cost:25 neobodur
+		passive:multiply bucket yield of neobodur by 2
+		req:(neobodur>=10)
+		icon:icons[7,4]
+	*line6
+		name:Line 6 Monkey
+		desc:Tried using my old amp. Forced to use this evil software.<//>"i watched dyna snort 6 lines of cocaine yesterday as he plead his allegiance to line 6"<//><b>Effect:</b><.>Neo Bodur is 10x more efficient.
+		cost:50 neobodur
+		passive:multiply bucket yield of neobodur by 10
+		req:(neobodur>=25)
+		icon:icons[7,5]
+	*super
+		name:Super form
+		desc:If you collect the 7 chaos emeralds... wait no<//><b>Effect:</b><.>Neo Bodur is 50x more efficient.
+		cost:100 neobodur
+		passive:multiply bucket yield of neobodur by 50
+		req:(neobodur>=50)
+		icon:icons[7,6]
+	//neolaurence
+	*solo
+		name:Solo FFTCK-500
+		desc:new guitars?<//><b>Effect:</b><.>Neo Laurence is 2x more efficient
+		cost:2 neolaurence
+		passive:multiply bucket yield of neolaurence by 2
+		req:(neolaurence>=1)
+		icon:icons[8,2]
+	*nailpolish
+		name:Black nail polish
+		desc:Do not drink.<//><b>Effect:</b><.>Neo Laurence is 2x more efficient.
+		cost:10 neolaurence
+		passive:multiply bucket yield of neolaurence by 2
+		req:(neolaurence>=5)
+		icon:icons[8,3]
+	*pubes
+		name:Pubes of Doom
+		desc:You can only do so good of a job.<//><b>Effect:</b><.>Neo Laurence is 2x more efficient.
+		cost:25 neolaurence
+		passive:multiply bucket yield of neolaurence by 2
+		req:(neolaurence>=10)
+		icon:icons[8,4]
+	*fuckbucket
+		name:Fuck Bucket
+		desc:Please don't.<//><b>Effect:</b><.>Neo Laurence is 10x more efficient.
+		cost:50 neolaurence
+		passive:multiply bucket yield of neolaurence by 10
+		req:(neolaurence>=25)
+		icon:icons[8,5]
+	*soul
+		name:SOUL EATING
+		desc:...𝖄𝕺𝖀𝕽𝕿𝕴𝕸𝕰𝕴𝕾𝕾𝕺𝕺𝕹...<//><b>Effect:</b><.>Neo Laurence is 50x more efficient.
+		cost:100 neolaurence
+		passive:multiply bucket yield of neolaurence by 50
+		req:(neolaurence>=50)
+		icon:icons[8,6]
+	//neomumu
+	*pronouns
+		name:Pronouns pin
+		desc:A pin with she/her pronouns.<//><b>Effect:</b><.>Neo Mumu is 2x more efficient
+		cost:2 neomumu
+		passive:multiply bucket yield of neomumu by 2
+		req:(neomumu>=1)
+		icon:icons[9,2]
+	*transflag
+		name:Trans flag
+		desc:A trans flag to put in your room! Not ironed.<//><b>Effect:</b><.>Neo Mumu is 2x more efficient.
+		cost:10 neomumu
+		passive:multiply bucket yield of neomumu by 2
+		req:(neomumu>=5)
+		icon:icons[9,3]
+	*voicetrain
+		name:Voice training
+		desc:Voice training trains your voice into a trained voice.<//><b>Effect:</b><.>Neo Mumu is 2x more efficient.
+		cost:25 neomumu
+		passive:multiply bucket yield of neomumu by 2
+		req:(neomumu>=10)
+		icon:icons[9,4]
+	*estrogen
+		name:Estrogen
+		desc:YOU can get HRT for selling only 50 of yourself!!<//><b>Effect:</b><.>Neo Mumu is 10x more efficient.
+		cost:50 neomumu
+		passive:multiply bucket yield of neomumu by 10
+		req:(neomumu>=25)
+		icon:icons[9,5]
+	*medal
+		name:That weird face medal thing on your forehead
+		desc:No idea what it does, but it certainly looks cool.<//><b>Effect:</b><.>Neo Mumu is 50x more efficient.
+		cost:100 neomumu
+		passive:multiply bucket yield of neomumu by 50
+		req:(neomumu>=50)
+		icon:icons[9,6]
+	//bungle
+	*chiley
+		name:Bowel of Chiley
+		desc:WHO THE FUCK PUT COTTAGE CHEESE IN MY BOWEL OF CHILEY????<//><b>Effect:</b><.>All* members of Mr. Bungle are 2x more efficient
+		cost:2 bungle
+		passive:multiply bucket yield of bungle by 2
+		req:(bungle>=1)
+		icon:icons[10,2]
+	*ou818
+		name:The square root of 14 million
+		desc:O-U-8-1-8<//><b>Effect:</b><.>All* members of Mr. Bungle are 2x more efficient.
+		cost:10 bungle
+		passive:multiply bucket yield of bungle by 2
+		req:(bungle>=5)
+		icon:icons[10,3]
+	*egg
+		name:Egg
+		desc:Egg.<//><b>Effect:</b><.>All* members of Mr. Bungle are 2x more efficient.
+		cost:25 bungle
+		passive:multiply bucket yield of bungle by 2
+		req:(bungle>=10)
+		icon:icons[10,4]
+	*bends
+		name:The Bends
+		desc:Not Radiohead.<//><b>Effect:</b><.>All* members of Mr. Bungle are 10x more efficient.
+		cost:50 bungle
+		passive:multiply bucket yield of bungle by 10
+		req:(bungle>=25)
+		icon:icons[10,5]
+	*rhcp
+		name:Kill Anthony Kiedis
+		desc:Makes shit music and is a pedo... what's not to hate?<//><b>Effect:</b><.>All* members of Mr. Bungle are 50x more efficient.
+		cost:100 bungle
+		passive:multiply bucket yield of bungle by 50
+		req:(neomumu>=50)
+		icon:icons[10,6]
