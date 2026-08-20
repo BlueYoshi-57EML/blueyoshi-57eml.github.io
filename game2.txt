@@ -82,21 +82,21 @@ Buildings
 		icon:icons[3,1]
 	*udabn
 		name:Udabn
-		desc:Lieutenant of the low end. Is to be feared/feared not. (shameless CinC reference, I apologize)<//><b>Effect:</b><.>1500 buckets every second.
+		desc:Lieutenant of the low end. Is to be feared/feared not. (shameless CinC reference, I apologize)<//><b>Effect:</b><.>500 buckets every second.
 		cost:100000 buckets
 		on tick:yield 500 buckets
 		req:50000 buckets:earned
 		icon:icons[4,1]
 	*mumu
 		name:Mumutits
-		desc:Sultan of the Strings... and sour cotton candy.<//><b>Effect:</b><.>10000 buckets every second.
+		desc:Sultan of the Strings... and sour cotton candy.<//><b>Effect:</b><.>1500 buckets every second.
 		cost:500000 buckets
 		on tick:yield 1500 buckets
 		req:150000 buckets:earned
 		icon:icons[5,1]
 	*capno
 		name:Captain No
-		desc:Ba dum tss. Tamer of SLOAR, the INSATIABLE.<//><b>Effect:</b><.>50000 buckets every second.
+		desc:Ba dum tss. Tamer of SLOAR, the INSATIABLE.<//><b>Effect:</b><.>5000 buckets every second.
 		cost:2500000 buckets
 		on tick:yield 5000 buckets
 		req:1000000 buckets:earned
